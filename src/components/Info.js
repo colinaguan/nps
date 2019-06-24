@@ -36,78 +36,76 @@ class Info extends Component {
         super(props);
 
         this.state = {
-            // parkInfo: {},
-            // alerts: {},
-            // articles: {},
-            // campgrounds: {},
-            // events: {},
-            // lessonplans: {},
-            // newsreleases: {},
-            // people: {},
-            // places: {},
-            // visitorcenters: {},
+            parkInfo: {},
+            alerts: {},
+            articles: {},
+            campgrounds: {},
+            events: {},
+            lessonplans: {},
+            newsreleases: {},
+            people: {},
+            places: {},
+            visitorcenters: {}
 
-            alerts: alertData,
-            articles: articleData,
-            campgrounds: campgroundData,
-            events: eventsData,
-            lessonplans: lessonData,
-            newsreleases: newsData,
-            people: pplData,
-            places: placesData,
-            visitorcenters: vcenterData,
+            // alerts: alertData,
+            // articles: articleData,
+            // campgrounds: campgroundData,
+            // events: eventsData,
+            // lessonplans: lessonData,
+            // newsreleases: newsData,
+            // people: pplData,
+            // places: placesData,
+            // visitorcenters: vcenterData,
         }
-
-        //parkInfo.images[0].url
 
         this.state.parkInfo = this.props.parks.data.find(function (element) {
             return element.parkCode === props.id;
         });
 
-        // fetch(API + 'alerts?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ alerts: data }))
-        //     .catch(console.log);
+        fetch(API + 'alerts?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ alerts: data }))
+            .catch(console.log);
 
-        // fetch(API + 'articles?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ articles: data }))
-        //     .catch(console.log);
+        fetch(API + 'articles?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ articles: data }))
+            .catch(console.log);
 
-        // fetch(API + 'campgrounds?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ campgrounds: data }))
-        //     .catch(console.log);
+        fetch(API + 'campgrounds?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ campgrounds: data }))
+            .catch(console.log);
 
-        // fetch(API + 'events?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ events: data }))
-        //     .catch(console.log);
+        fetch(API + 'events?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ events: data }))
+            .catch(console.log);
 
-        // fetch(API + 'lessonplans?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ lessonplans: data }))
-        //     .catch(console.log);
+        fetch(API + 'lessonplans?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ lessonplans: data }))
+            .catch(console.log);
 
-        // fetch(API + 'newsreleases?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ newsreleases: data }))
-        //     .catch(console.log);
+        fetch(API + 'newsreleases?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ newsreleases: data }))
+            .catch(console.log);
 
-        // fetch(API + 'people?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ people: data }))
-        //     .catch(console.log);
+        fetch(API + 'people?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ people: data }))
+            .catch(console.log);
 
-        // fetch(API + 'places?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ places: data }))
-        //     .catch(console.log);
+        fetch(API + 'places?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ places: data }))
+            .catch(console.log);
 
-        // fetch(API + 'visitorcenters?parkCode=' + this.props.id + '&api_key=' + KEY)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ visitorcenters: data }))
-        //     .catch(console.log);
+        fetch(API + 'visitorcenters?parkCode=' + this.props.id + '&api_key=' + KEY)
+            .then(response => response.json())
+            .then(data => this.setState({ visitorcenters: data }))
+            .catch(console.log);
     }
 
     render() {
